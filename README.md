@@ -18,9 +18,9 @@ The main purpose of this Software Development Kit (SDK) is to facilitates the in
 
 ## Features
 
-- *getStores* : The method getStores returns a list of killbills integrated stores as an array of objects with relevant properties.
-- *sendBankingTransaction* : The method sendBanking transaction validates and send transaction to the killbills gate transaction.
-- *sendReceipt* : The method sendReceipt validates and send a receipt to the killbills gate receipt.
+- **getStores** : The method getStores returns a list of killbills integrated stores as an array of objects with relevant properties.
+- **sendBankingTransaction** : The method sendBanking transaction validates and send transaction to the killbills gate transaction.
+- **sendReceipt** : The method sendReceipt validates and send a receipt to the killbills gate receipt.
 
 
 
