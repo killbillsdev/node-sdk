@@ -8,7 +8,7 @@ describe("sendReceipt Test", () => {
     console.log("NEW RECEIPT TEST: ");
 
   });
-
+  const date = new Date().toISOString().split('.')[0];
   const invalidPayload = {
     date: "2023-07-16T09:04:08.823",
     mode: 0,
@@ -230,7 +230,7 @@ describe("sendReceipt Test", () => {
     reference_id: "1221554511",
   };
   const validPayload2 = {
-    date: "2023-07-16T09:04:08",
+    date: date,
     mode: "test",
     items: [
       {
@@ -331,7 +331,7 @@ describe("sendReceipt Test", () => {
         last_four: "0",
         payment_type: "CB",
         transaction_id: "null",
-        transaction_date: "2023-07-16T09:04:08",
+        transaction_date: date,
       },
     ],
     partner_name: process.env.TEST_POS_PARTNER_NAME as string,

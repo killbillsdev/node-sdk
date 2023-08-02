@@ -17,7 +17,7 @@ export const  sendDataWithHmac = async (env: string, endpoint: string ,data: obj
             'Authorization': `hmac ${hashedPayload}`,
             'Content-Type': 'application/json'
         }
-        return await axios.post(`https://in.${env !== 'prod' ? env + '.' : '.' }killbills.${env !== 'prod' ? 'dev' : 'co'}/${endpoint}`, JSON.stringify(data), { headers })
+        return await axios.post(`https://in.${env !== 'prod' ? env + '.' : '' }killbills.${env !== 'prod' ? 'dev' : 'co'}/${endpoint}`, JSON.stringify(data), { headers })
     } 
     catch (error: Error | any) {
         return error?.message;
