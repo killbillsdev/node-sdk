@@ -13,7 +13,7 @@ describe('getStores', () => {
     const getMock = jest.spyOn(axios, 'get').mockResolvedValue(storesData);
 
     await getStores(env, apiKey);
-    expect(getMock).toHaveBeenCalledWith(`https://w${env === 'prod' ? '.' : env + '.' }killbills.${env === 'prod' ? 'co' : 'dev'}/stores`, {"headers": {"Authorization": apiKey}});
+    expect(getMock).toHaveBeenCalledWith(`https://w${env === 'prod' ? '.' : env + '.'}killbills.${env === 'prod' ? 'co' : 'dev'}/stores?limit=1000&offset=0`, {"headers": {"Authorization": apiKey}});
   });
 
   it('should fetch stores from the specified environment',async () => {
